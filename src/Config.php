@@ -24,6 +24,11 @@ class Config extends BaseConfig
         $this->level(FixerInterface::SYMFONY_LEVEL);
 
         $this->fixers([
+            // Unfortunately cannot use this fixer as a lot of Jadu code is within `/jadu` but
+            //  namespaced in the `Jadu` root namespace. Since the case does not match it will
+            //  change it to lower case, which is incorrect.
+            '-psr0',
+
             // Order use statements alphabetically
             'ordered_use',
 
