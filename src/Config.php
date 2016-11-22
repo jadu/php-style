@@ -32,14 +32,15 @@ class Config extends BaseConfig
             // Do not vertically align params
             '-phpdoc_params',
 
+            // Concat with spaces (and disabled Symfony rule to concat without to avoid to-me-to-you behaviour)
+            '-concat_without_spaces',
+            'concat_with_spaces',
+
             // Order use statements alphabetically
             'ordered_use',
 
             // Remove useless else
             'no_useless_else',
-
-            // Remove useless return statements
-            'no_useless_return',
         ]);
     }
 }
