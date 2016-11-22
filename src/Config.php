@@ -38,9 +38,6 @@ class Config extends BaseConfig
 
             // Order use statements alphabetically
             'ordered_use',
-
-            // Remove useless else
-            'no_useless_else',
         ]);
     }
 }
