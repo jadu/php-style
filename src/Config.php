@@ -29,6 +29,9 @@ class Config extends BaseConfig
             //  change it to lower case, which is incorrect.
             '-psr0',
 
+            // Do not vertically align params
+            '-phpdoc_params',
+
             // Order use statements alphabetically
             'ordered_use',
 
