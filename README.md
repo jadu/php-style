@@ -8,16 +8,17 @@ In your project's `.php_cs` config file use the `Config` class as follows:
 require_once __DIR__ . '/vendor/jadu/php-style/src/Config.php';
 
 use Jadu\Style\Config;
-use Symfony\CS\Finder;
+use PhpCsFixer\Finder;
 
 $finder = Finder::create();
-$finder->in(__DIR__ . '/src');
-$finder->in(__DIR__ . '/tests');
+$finder->in(__DIR__ . '/jadu');
+$finder->in(__DIR__ . '/tests/unit');
 
 $config = new Config();
-$config->finder($finder);
+$config->setFinder($finder);
 
 return $config;
+
 ```
 
 Note: Remember to set up the finder appropriately for your project.
