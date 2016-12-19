@@ -2,42 +2,42 @@
 
 namespace Jadu\Style;
 
-use Symfony\CS\Config as BaseConfig;
-use Symfony\CS\FixerInterface;
+use PhpCsFixer\Config as BaseConfig;
 
 class Config extends BaseConfig
 {
     /**
      * @param string $name
-     * @param string $description
      */
-    public function __construct($name = 'Jadu', $description = 'The Jadu PHP Style')
+    public function __construct($name = 'Jadu')
     {
-        parent::__construct($name, $description);
+        parent::__construct($name);
 
         $this->initialise();
     }
 
     private function initialise()
     {
-        // Use the Symfony styleguide as a base
-        $this->level(FixerInterface::SYMFONY_LEVEL);
+        $this->setRules([
+            // Use the Symfony style as a base
+            '@Symfony' => true,
 
-        $this->fixers([
             // Unfortunately cannot use this fixer as a lot of Jadu code is within `/jadu` but
             //  namespaced in the `Jadu` root namespace. Since the case does not match it will
             //  change it to lower case, which is incorrect.
-            '-psr0',
+            'psr0' => false,
 
-            // Do not vertically align params
-            '-phpdoc_params',
+            // Use short array syntax
+            'array_syntax' => ['syntax' => 'short'],
 
-            // Concat with spaces (and disabled Symfony rule to concat without to avoid to-me-to-you behaviour)
-            '-concat_without_spaces',
-            'concat_with_spaces',
+            // Concat with spaces
+            'concat_space' => ['spacing' => 'one'],
 
             // Order use statements alphabetically
-            'ordered_use',
+            'ordered_imports' => true,
+
+            // Do not vertically align params
+            'phpdoc_align' => false,
         ]);
     }
 }
