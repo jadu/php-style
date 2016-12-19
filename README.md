@@ -1,5 +1,11 @@
 # Jadu PHP Style
 
+Require the php-style dev dependency:
+
+```
+composer require --dev jadu/php-style
+```
+
 In your project's `.php_cs` config file use the `Config` class as follows:
 
 ```
