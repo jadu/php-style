@@ -1,5 +1,7 @@
 {
     "name": "jadu/php-style",
+    "type": "library",
+    "description": "Jadu PHP coding style configuration for PHP-CS-Fixer",
     "require": {
         "php": ">=5.6",
         "friendsofphp/php-cs-fixer": "^2.0"
