@@ -17,7 +17,7 @@ use Jadu\Style\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create();
-$finder->in(__DIR__ . '/jadu');
+$finder->in(__DIR__ . '/src');
 $finder->in(__DIR__ . '/tests/unit');
 
 $config = new Config();
@@ -27,4 +27,8 @@ return $config;
 
 ```
 
-Note: Remember to set up the finder appropriately for your project.
+Now add phpcs to your project's build tasks. Example CI command:
+
+```
+vendor/bin/php-cs-fixer --dry-run -v fix
+```
