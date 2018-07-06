@@ -38,6 +38,9 @@ class Config extends BaseConfig
 
             // Do not vertically align params
             'phpdoc_align' => false,
+            
+            // prefer 'print' over 'echo'
+            'no_mixed_echo_print' => ['use' => 'print'],
         ]);
     }
 }
