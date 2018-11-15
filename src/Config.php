@@ -38,9 +38,15 @@ class Config extends BaseConfig
 
             // Do not vertically align params
             'phpdoc_align' => false,
-            
-            // prefer 'print' over 'echo'
+
+            // Prefer 'print' over 'echo'
             'no_mixed_echo_print' => ['use' => 'print'],
+
+            // Use === null instead of is_null()
+            'is_null' => ['use_yoda_style' => false],
         ]);
+
+        // Need to allow risky for is_null
+        $this->setRiskyAllowed(true);
     }
 }
