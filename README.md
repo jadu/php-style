@@ -27,8 +27,9 @@ return $config;
 
 ```
 
-Now add phpcs to your project's build tasks. Example CI command:
+Now add phpcs to your project's build tasks.
 
+Example CI command:
 ```
 vendor/bin/php-cs-fixer --dry-run -v fix
 ```
