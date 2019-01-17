@@ -37,9 +37,21 @@ class Config extends BaseConfig
 
             // Do not vertically align params
             'phpdoc_align' => false,
-            
-            // prefer 'print' over 'echo'
+
+            // Prefer 'print' over 'echo'
             'no_mixed_echo_print' => ['use' => 'print'],
+
+            // Use === null instead of is_null()
+            'is_null' => ['use_yoda_style' => false],
+
+            // Don't use 'yoda style' comparisons (enabled by default as of php cs fixer 2.6.0)
+            'yoda_style' => false,
+
+            // Prefer self:: / static:: over $this-> for unit test assertions (defaults to static::)
+            'php_unit_test_case_static_method_calls' => true,
         ]);
+
+        // Need to allow risky for is_null
+        $this->setRiskyAllowed(true);
     }
 }
