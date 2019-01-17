@@ -12,7 +12,6 @@ class Config extends BaseConfig
     public function __construct($name = 'Jadu')
     {
         parent::__construct($name);
-
         $this->initialise();
     }
 
