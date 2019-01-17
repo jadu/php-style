@@ -41,6 +41,12 @@ class Config extends BaseConfig
             
             // prefer 'print' over 'echo'
             'no_mixed_echo_print' => ['use' => 'print'],
+
+            // Don't use 'yoda style' comparisons (enabled by default as of php cs fixer 2.6.0)
+            'yoda_style' => false,
+
+            // Prefer self:: / static:: over $this-> for unit test assertions (defaults to static::)
+            'php_unit_test_case_static_method_calls' => true,
         ]);
     }
 }
