@@ -49,6 +49,14 @@ class Config extends BaseConfig
 
             // Prefer self:: / static:: over $this-> for unit test assertions (defaults to static::)
             'php_unit_test_case_static_method_calls' => true,
+
+            '@DoctrineAnnotation' => true,
+            'doctrine_annotation_array_assignment' => ['operator' => '='],
+
+            'general_phpdoc_annotation_remove' => ['author', 'license', 'package', 'copyright'],
+
+            'phpdoc_order' => true,
+            'phpdoc_trim_consecutive_blank_line_separation' => true,
         ]);
 
         // Need to allow risky for is_null
