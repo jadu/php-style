@@ -18,6 +18,9 @@ class Config extends BaseConfig
     private function initialise()
     {
         $this->setRules([
+            '@PHP70Migration' => true,
+            '@PHP71Migration' => true,
+
             // Use the Symfony style as a base
             '@Symfony' => true,
 
