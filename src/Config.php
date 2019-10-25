@@ -39,7 +39,7 @@ class Config extends BaseConfig
             'ordered_imports' => true,
 
             // Do not vertically align params
-            'phpdoc_align' => 'left',
+            'phpdoc_align' => ['align' => 'left'],
 
             // Prefer 'print' over 'echo'
             'no_mixed_echo_print' => ['use' => 'print'],
