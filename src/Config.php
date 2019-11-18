@@ -52,6 +52,9 @@ class Config extends BaseConfig
 
             // Prefer self:: / static:: over $this-> for unit test assertions (defaults to static::)
             'php_unit_test_case_static_method_calls' => true,
+
+            // Do not remove the params doc if there is no description
+            'no_superfluous_phpdoc_tags' => false,
         ]);
 
         // Need to allow risky for is_null
