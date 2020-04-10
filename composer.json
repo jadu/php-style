@@ -3,9 +3,15 @@
     "type": "library",
     "description": "Jadu PHP coding style configuration for PHP-CS-Fixer",
     "license": "proprietary",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo-packagist.hq.jadu.net/jadu/"
+        }
+    ],
     "require": {
         "php": ">=7.1",
-        "friendsofphp/php-cs-fixer": "^2.14"
+        "jadu/php-cs-fixer": "dev-master"
     },
     "autoload": {
         "psr-4": {
