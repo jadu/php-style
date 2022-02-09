@@ -20,6 +20,7 @@ class Config extends BaseConfig
         $this->setRules([
             '@PHP70Migration' => true,
             '@PHP71Migration' => true,
+            '@PHP81Migration' => true,
 
             // Use the Symfony style as a base
             '@Symfony' => true,
