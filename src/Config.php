@@ -25,11 +25,6 @@ class Config extends BaseConfig
             // Use the Symfony style as a base
             '@Symfony' => true,
 
-            // Unfortunately cannot use this fixer as a lot of Jadu code is within `/jadu` but
-            //  namespaced in the `Jadu` root namespace. Since the case does not match it will
-            //  change it to lower case, which is incorrect.
-            'psr0' => false,
-
             // Use short array syntax
             'array_syntax' => ['syntax' => 'short'],
 
@@ -46,7 +41,7 @@ class Config extends BaseConfig
             'no_mixed_echo_print' => ['use' => 'print'],
 
             // Use === null instead of is_null()
-            'is_null' => ['use_yoda_style' => false],
+            'is_null' => true,
 
             // Don't use 'yoda style' comparisons (enabled by default as of php cs fixer 2.6.0)
             'yoda_style' => false,
