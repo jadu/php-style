@@ -51,6 +51,32 @@ class Config extends BaseConfig
 
             // Do not remove the params doc if there is no description
             'no_superfluous_phpdoc_tags' => false,
+
+
+            //-- Added for BC following upgrade to php-cs-fixer 3.x
+            'global_namespace_import' => false,
+
+            'visibility_required' => [
+                'elements' => ['property', 'method'],
+            ],
+
+            'heredoc_indentation' => false,
+
+            'no_unneeded_control_parentheses' => [
+                'statements' => [
+                    'break', 'clone', 'continue', 'echo_print', 'return', 'switch_case', 'yield'
+                ],
+            ],
+
+            'phpdoc_order' => false,
+
+            'single_line_comment_spacing' => false,
+
+            'braces' => false,
+
+            'phpdoc_separation' => false,
+            //--//
+
         ]);
 
         // Need to allow risky for is_null
