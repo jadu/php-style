@@ -20,7 +20,9 @@ class Config extends BaseConfig
         $this->setRules([
             '@PHP70Migration' => true,
             '@PHP71Migration' => true,
+            '@PHP80Migration' => true,
             '@PHP81Migration' => true,
+            '@PHP82Migration' => true,
 
             // Use the Symfony style as a base
             '@Symfony' => true,
@@ -40,9 +42,6 @@ class Config extends BaseConfig
             // Prefer 'print' over 'echo'
             'no_mixed_echo_print' => ['use' => 'print'],
 
-            // Use === null instead of is_null()
-            'is_null' => true,
-
             // Don't use 'yoda style' comparisons (enabled by default as of php cs fixer 2.6.0)
             'yoda_style' => false,
 
@@ -52,31 +51,7 @@ class Config extends BaseConfig
             // Do not remove the params doc if there is no description
             'no_superfluous_phpdoc_tags' => false,
 
-
-            //-- Added for BC following upgrade to php-cs-fixer 3.x
             'global_namespace_import' => false,
-
-            'visibility_required' => [
-                'elements' => ['property', 'method'],
-            ],
-
-            'heredoc_indentation' => false,
-
-            'no_unneeded_control_parentheses' => [
-                'statements' => [
-                    'break', 'clone', 'continue', 'echo_print', 'return', 'switch_case', 'yield'
-                ],
-            ],
-
-            'phpdoc_order' => false,
-
-            'single_line_comment_spacing' => false,
-
-            'braces' => false,
-
-            'phpdoc_separation' => false,
-            //--//
-
         ]);
 
         // Need to allow risky for is_null
