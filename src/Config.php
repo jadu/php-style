@@ -52,6 +52,8 @@ class Config extends BaseConfig
             'no_superfluous_phpdoc_tags' => false,
 
             'global_namespace_import' => false,
+
+            'octal_notation' => false,
         ]);
 
         // Need to allow risky for is_null
