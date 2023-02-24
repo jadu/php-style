@@ -54,6 +54,9 @@ class Config extends BaseConfig
             'global_namespace_import' => false,
 
             'octal_notation' => false,
+
+            // Can interfere with LOCALE constant
+            'class_reference_name_casing' => false,
         ]);
 
         // Need to allow risky for is_null
