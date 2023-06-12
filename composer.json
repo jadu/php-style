@@ -5,7 +5,7 @@
     "license": "proprietary",
     "require": {
         "php": ">=7.1",
-        "friendsofphp/php-cs-fixer": "^2.14"
+        "friendsofphp/php-cs-fixer": "^3.14"
     },
     "autoload": {
         "psr-4": {

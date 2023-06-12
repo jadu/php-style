@@ -20,14 +20,12 @@ class Config extends BaseConfig
         $this->setRules([
             '@PHP70Migration' => true,
             '@PHP71Migration' => true,
+            '@PHP80Migration' => true,
+            '@PHP81Migration' => true,
+            '@PHP82Migration' => true,
 
             // Use the Symfony style as a base
             '@Symfony' => true,
-
-            // Unfortunately cannot use this fixer as a lot of Jadu code is within `/jadu` but
-            //  namespaced in the `Jadu` root namespace. Since the case does not match it will
-            //  change it to lower case, which is incorrect.
-            'psr0' => false,
 
             // Use short array syntax
             'array_syntax' => ['syntax' => 'short'],
@@ -44,9 +42,6 @@ class Config extends BaseConfig
             // Prefer 'print' over 'echo'
             'no_mixed_echo_print' => ['use' => 'print'],
 
-            // Use === null instead of is_null()
-            'is_null' => ['use_yoda_style' => false],
-
             // Don't use 'yoda style' comparisons (enabled by default as of php cs fixer 2.6.0)
             'yoda_style' => false,
 
@@ -55,6 +50,13 @@ class Config extends BaseConfig
 
             // Do not remove the params doc if there is no description
             'no_superfluous_phpdoc_tags' => false,
+
+            'global_namespace_import' => false,
+
+            'octal_notation' => false,
+
+            // Can interfere with LOCALE constant
+            'class_reference_name_casing' => false,
         ]);
 
         // Need to allow risky for is_null
