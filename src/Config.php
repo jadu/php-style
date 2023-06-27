@@ -57,6 +57,9 @@ class Config extends BaseConfig
 
             // Can interfere with LOCALE constant
             'class_reference_name_casing' => false,
+
+            // Disable heredoc indentation modification
+            'heredoc_indentation' => false,
         ]);
 
         // Need to allow risky for is_null
