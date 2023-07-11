@@ -63,6 +63,9 @@ class Config extends BaseConfig
 
             // Allow if (true): endif; alternative syntax for control structures
             'no_alternative_syntax' => false,
+
+            // Allow exceptions to be thrown over multiple lines
+            'single_line_throw' => false,
         ]);
 
         // Need to allow risky for is_null
