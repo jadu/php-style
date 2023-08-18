@@ -61,9 +61,6 @@ class Config extends BaseConfig
             // Disable heredoc indentation modification
             'heredoc_indentation' => false,
 
-            // Allow if (true): endif; alternative syntax for control structures
-            'no_alternative_syntax' => false,
-
             // Allow exceptions to be thrown over multiple lines
             'single_line_throw' => false,
 
