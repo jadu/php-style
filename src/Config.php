@@ -23,7 +23,7 @@ class Config extends BaseConfig
             '@PHP80Migration' => true,
             '@PHP81Migration' => true,
             '@PHP82Migration' => true,
- 
+
             // Use the Symfony style as a base
             '@Symfony' => true,
 
