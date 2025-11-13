@@ -18,11 +18,11 @@ class Config extends BaseConfig
     private function initialise()
     {
         $this->setRules([
-            '@PHP7x0Migration' => true,
-            '@PHP7x1Migration' => true,
-            '@PHP8x0Migration' => true,
-            '@PHP8x1Migration' => true,
-            '@PHP8x2Migration' => true,
+            '@PHP70Migration' => true,
+            '@PHP71Migration' => true,
+            '@PHP80Migration' => true,
+            '@PHP81Migration' => true,
+            '@PHP82Migration' => true,
 
             // Use the Symfony style as a base
             '@Symfony' => true,
